@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --label-column-width: 80px;
+  --short-input-column-width: 70px;
+  --long-input-column-width: 400px;
+
+  /* the selects are 5px shorter than the inputs, so hack it up instead of investing more time into understanding why */
+  --select-padding-hack: calc(0.25rem + calc(5px / 2));
+}
+
+@layer base {
+  @media (prefers-color-scheme: dark) {
+    html {
+      @apply text-white;
+      @apply bg-black;
+    }
+
+    input[type='text'],
+    input[type='number'],
+    select {
+      @apply border-gray-400;
+      @apply text-green-500;
+    }
+
+    input[type='text'],
+    input[type='number'],
+    input[type='checkbox'],
+    input[type='checkbox']:after,
+    input[type='checkbox']:before,
+    select {
+      @apply bg-black;
+    }
+
+    input[type='checkbox'] {
+      @apply border-white;
+    }
+
+    input[type='checkbox']:hover,
+    input[type='checkbox']:checked {
+      @apply border-green-500;
+    }
+
+    input[type='checkbox']:checked {
+      @apply bg-green-500;
+    }
+
+    input[type='checkbox']::after {
+      @apply bg-transparent;
+      @apply text-transparent;
+    }
+
+    input[type='checkbox']:checked::after {
+      @apply text-black;
+    }
+
+    input[type='checkbox']:hover+label,
+    input[type='checkbox']:checked+label {
+      @apply text-green-500;
+    }
+  }
+
+  h1 {
+    @apply text-4xl;
+  }
+
+  h2 {
+    @apply text-2xl;
+  }
+
+  h3 {
+    @apply text-xl;
+  }
+
+  h4 {
+    @apply text-lg;
+  }
+
+  h5 {
+    @apply text-base;
+  }
+
+  h6 {
+    @apply text-sm;
+  }
+
+  fieldset {
+    @apply p-2;
+  }
+
+  input[type='text'],
+  input[type='number'],
+  select {
+    @apply p-1;
+    @apply border;
+    @apply rounded-sm;
+  }
+
+  input[type='checkbox'] {
+    @apply box-content;
+    @apply appearance-none;
+    width: 10px;
+    height: 10px;
+    @apply inline-flex;
+    @apply items-center;
+    @apply justify-center;
+    @apply bg-transparent;
+    @apply border-2;
+    @apply rounded-sm;
+  }
+
+  input[type='checkbox']::after,
+  input[type='checkbox']:checked::after {
+    content: '✓';
+    @apply font-semibold;
+  }
+
+  select {
+    padding-top: var(--select-padding-hack);
+    padding-bottom: var(--select-padding-hack);
+  }
+}
+
+.text-grid-cols {
+  grid-template-columns: var(--label-column-width) var(--long-input-column-width);
+  @apply items-center;
+}
+
+.number-grid-cols {
+  grid-template-columns: var(--label-column-width) var(--short-input-column-width);
+  @apply items-center;
+}
+
+.select-grid-cols {
+  grid-template-columns: var(--label-column-width) var(--short-input-column-width);
+  @apply items-center;
+}
+
+.switch-grid-cols {
+  grid-template-columns: max-content max-content;
+}
+
+.small-caps {
+  font-variant-caps: small-caps;
+}
