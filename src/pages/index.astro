@@ -1,15 +1,14 @@
 ---
-import '../index.css'
+import TheHomeHead from '@components/TheHomeHead.astro';
+import TheHomeHeader from '@components/TheHomeHeader.astro';
+import TheHomeMain from '@components/TheHomeMain.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro YOLO	</title>
-	</head>
-	<body>
-		<h1>Astro YOLO</h1>
+<!DOCTYPE html>
+<html lang="en-US">
+  <TheHomeHead></TheHomeHead>
+	<body class="bg-dusty-blue px3">
+		<TheHomeHeader></TheHomeHeader>
+		<TheHomeMain></TheHomeMain>
 	</body>
 </html>
