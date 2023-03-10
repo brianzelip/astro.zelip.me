@@ -2,6 +2,7 @@
 import TheHomeHead from '@components/TheHomeHead.astro';
 import TheHomeHeader from '@components/TheHomeHeader.astro';
 import TheHomeMain from '@components/TheHomeMain.astro';
+import * as Bio from '@data/bio.md';
 ---
 
 <!DOCTYPE html>
@@ -9,6 +10,6 @@ import TheHomeMain from '@components/TheHomeMain.astro';
   <TheHomeHead></TheHomeHead>
 	<body class="bg-dusty-blue px3">
 		<TheHomeHeader></TheHomeHeader>
-		<TheHomeMain></TheHomeMain>
+		<TheHomeMain bio={Bio.compiledContent()}></TheHomeMain>
 	</body>
 </html>
