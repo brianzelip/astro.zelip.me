@@ -1,23 +1,27 @@
-<header class="sm-mt4 md-mt5 narrow-container">
+---
+import * as site from "../consts";
+---
+
+<header class="sm:mt-16 md:mt-20 narrow-container">
   <div
-    class="flex flex-column align-center sm-flex-row sm-justify-center py2 sm-py0"
+    class="flex flex-col items-center sm:flex-row sm:justify-center py-4 sm:py-0"
   >
     <img
-      alt="Brian Zelip"
-      class="circle mb1 sm-mb0 sm-mr2 w-200px md-250px"
+      alt={site.SITE_TITLE}
+      class="rounded-full mb-2 sm:mb-0 sm:mr-4 w-200px md-250px"
       src="./img/bz-mmcc.jpg"
     />
-    <div class="px1 center sm-left-align">
-      <h1 class="m0 h0 lh-1p2 white">Brian Zelip</h1>
-      <nav class="flex flex-wrap justify-around sm-justify-between mt1">
+    <div class="px-2 text-center sm:text-left">
+      <h1 class="m-0 h0 lh-1p2 text-white">{site.SITE_TITLE}</h1>
+      <nav class="flex flex-wrap justify-around sm:justify-between mt-2">
         <a
-          class="h2 white sm-px0 sm-m0 green-underline text-decoration-none lh-1"
-          href="mailto:bzelip@protonmail.com"
+          class="h2 text-white sm:px-0 sm:m-0 green-underline text-decoration-none leading-none"
+          href={`mailto:${site.EMAIL}`}
           title="Email Brian"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="sm-hide nav-icon"
+            class="sm:hidden nav-icon"
             aria-hidden="true"
             focusable="false"
             role="img"
@@ -29,16 +33,16 @@
             ></path>
           </svg>
 
-          <span class="none sm-block">Email</span>
+          <span class="hidden sm:block">Email</span>
         </a>
         <a
-          class="h2 white sm-px0 sm-m0 green-underline text-decoration-none lh-1"
-          href="https://github.com/brianzelip"
+          class="h2 text-white sm:px-0 sm:m-0 green-underline text-decoration-none leading-none"
+          href={site.GH}
           title="Go to Brian's GitHub profile"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="sm-hide nav-icon"
+            class="sm:hidden nav-icon"
             aria-hidden="true"
             focusable="false"
             role="img"
@@ -50,16 +54,16 @@
             ></path>
           </svg>
 
-          <span class="none sm-block">GitHub</span>
+          <span class="hidden sm:block">GitHub</span>
         </a>
         <a
-          class="h2 white sm-px0 sm-m0 green-underline text-decoration-none lh-1"
-          href="https://twitter.com/bzelip"
+          class="h2 text-white sm:px-0 sm:m-0 green-underline text-decoration-none leading-none"
+          href={site.TWITTER}
           title="Go to Brian's Twitter profile"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="sm-hide nav-icon"
+            class="sm:hidden nav-icon"
             aria-hidden="true"
             focusable="false"
             role="img"
@@ -71,16 +75,16 @@
             ></path>
           </svg>
 
-          <span class="none sm-block">Twitter</span>
+          <span class="hidden sm:block">Twitter</span>
         </a>
         <a
-          class="h2 white sm-px0 sm-m0 green-underline text-decoration-none lh-1"
-          href="https://www.linkedin.com/in/zelip"
+          class="h2 text-white sm:px-0 sm:m-0 green-underline text-decoration-none leading-none"
+          href={site.LINKEDIN}
           title="Go to Brian's Linkedin profile"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="sm-hide nav-icon"
+            class="sm:hidden nav-icon"
             aria-hidden="true"
             focusable="false"
             role="img"
@@ -92,7 +96,7 @@
             ></path>
           </svg>
 
-          <span class="none sm-block">LinkedIn</span>
+          <span class="hidden sm:block">LinkedIn</span>
         </a>
       </nav>
     </div>

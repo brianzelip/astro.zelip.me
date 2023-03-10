@@ -1,15 +1,14 @@
 ---
-import TheHomeHead from '@components/TheHomeHead.astro';
-import TheHomeHeader from '@components/TheHomeHeader.astro';
-import TheHomeMain from '@components/TheHomeMain.astro';
-import * as Bio from '@data/bio.md';
+import TheHomeHead from "@components/TheHomeHead.astro";
+import TheHomeHeader from "@components/TheHomeHeader.astro";
+import TheHomeMain from "@components/TheHomeMain.astro";
 ---
 
 <!DOCTYPE html>
 <html lang="en-US">
-  <TheHomeHead></TheHomeHead>
-	<body class="bg-dusty-blue px3">
-		<TheHomeHeader></TheHomeHeader>
-		<TheHomeMain bio={Bio.compiledContent()}></TheHomeMain>
-	</body>
+  <TheHomeHead />
+  <body class="bg-dusty-blue px-8">
+    <TheHomeHeader />
+    <TheHomeMain />
+  </body>
 </html>

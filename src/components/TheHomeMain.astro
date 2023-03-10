@@ -1,11 +1,11 @@
 ---
-const { bio } = Astro.props;
+import * as Bio from "@data/bio.md";
 ---
 
-<main class="sm-mt3 md-mt4 sm-mb4 narrow-container white">
-  <div class="flex flex-column">
-    <div class="h2 p1 m0 fw-200">
-      <Fragment set:html={bio} />
+<main class="sm:mt-8 md:mt-16 sm:mb-16 narrow-container text-white">
+  <div class="flex flex-col">
+    <div class="h2 p-2 m-0 font-extralight">
+      <Fragment set:html={Bio.compiledContent()} />
     </div>
   </div>
 </main>

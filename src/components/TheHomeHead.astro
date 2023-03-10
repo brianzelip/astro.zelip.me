@@ -1,10 +1,12 @@
 ---
-import '../index.css'
+import { SITE_DESCRIPTION as desc, SITE_TITLE as title } from "../consts";
+import "../index.css";
 ---
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brian Zelip</title>
-  <meta name="description" content="Brian Zelip's home page." />
-  <meta name="author" content="Brian Zelip" />
+  <title>{title}</title>
+  <meta name="description" content={desc} />
+  <meta name="author" content={title} />
 </head>
